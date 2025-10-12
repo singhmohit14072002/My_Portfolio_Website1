@@ -83,8 +83,23 @@ app.post('/api/contact', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
+// Health check endpoint for Azure
+app.get('/health', (req, res) => {
+    res.status(200).json({ 
+        status: 'OK', 
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime()
+    });
+});
+
+// Default route
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on port ${port}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
     console.log('Email configuration:', {
         user: process.env.EMAIL_USER ? 'Set' : 'Not set',
         pass: process.env.EMAIL_PASS ? 'Set' : 'Not set'

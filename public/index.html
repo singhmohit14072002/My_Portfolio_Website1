@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Portfolio</title>
+    <title>Cloud/DevOps Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -53,8 +53,21 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 10px rgba(52, 152, 219, 0.3));
         }
 
         .nav-links {
@@ -67,13 +80,43 @@
         }
 
         .nav-links a {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.2), transparent);
+            transition: left 0.5s ease;
         }
 
         .nav-links a:hover {
             color: var(--secondary-color);
+            background-color: rgba(52, 152, 219, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+        }
+        
+        .nav-links a:hover::before {
+            left: 100%;
+        }
+        
+        .nav-links a:active {
+            transform: translateY(0);
         }
 
         /* Hero Section */
@@ -228,31 +271,61 @@
         .social-links a:hover {
             color: var(--secondary-color);
         }
+        
+        /* Responsive Navigation Fonts */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+                letter-spacing: 0.8px;
+            }
+            
+            .nav-links a {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.3rem;
+                letter-spacing: 0.6px;
+            }
+            
+            .nav-links a {
+                font-size: 0.85rem;
+                padding: 5px 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="floating-icons">
         <i class="fab fa-docker"></i>
-        <i class="fab fa-aws"></i>
-        <i class="fab fa-git-alt"></i>
         <i class="fab fa-jenkins"></i>
-        <i class="fas fa-cube"></i>
-        <i class="fab fa-docker"></i>
         <i class="fab fa-aws"></i>
+        <i class="fab fa-microsoft"></i>
+        <i class="fab fa-google"></i>
         <i class="fab fa-git-alt"></i>
-        <i class="fab fa-jenkins"></i>
         <i class="fas fa-cube"></i>
+        <i class="fas fa-ship"></i>
+        <i class="fas fa-chart-line"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-server"></i>
+        <i class="fas fa-code"></i>
+        <i class="fas fa-cogs"></i>
+        <i class="fas fa-rocket"></i>
+        <i class="fas fa-database"></i>
     </div>
     <header class="main-header">
         <div class="container">
             <nav class="main-nav">
-                <div class="logo">DevOps<span>Portfolio</span></div>
+                <div class="logo">MOHIT SINGH</div>
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -262,10 +335,10 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="title-line">DevOps</span>
+                    <span class="title-line">Cloud / DevOps</span>
                     <span class="title-line">Engineer</span>
                 </h1>
-                <p class="hero-subtitle">Passionate about automation, cloud computing, and continuous integration/continuous deployment (CI/CD)</p>
+                <p class="hero-subtitle">Experienced Cloud & DevOps Engineer specializing in automation, infrastructure as code, and scalable cloud solutions. Proven expertise in CI/CD pipelines, containerization, and multi-cloud deployments.</p>
                 <div class="hero-images">
                     <div class="hero-image">
                         <img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=800&q=80" alt="Cloud Infrastructure" class="devops-image">
@@ -290,22 +363,42 @@
 
     <!-- Introduction Section -->
     <section id="introduction" class="introduction-section">
+        <div class="intro-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            <div class="tech-pattern"></div>
+            <div class="section-devops-icons">
+                <i class="fab fa-docker"></i>
+                <i class="fab fa-aws"></i>
+                <i class="fab fa-microsoft"></i>
+                <i class="fab fa-google"></i>
+                <i class="fas fa-cloud"></i>
+                <i class="fas fa-server"></i>
+                <i class="fas fa-cogs"></i>
+                <i class="fas fa-rocket"></i>
+            </div>
+        </div>
         <div class="container">
             <div class="intro-content">
                 <div class="intro-text">
                     <h2 class="section-title">About Me</h2>
                     <p class="intro-description">
-                        🙋‍♂️ Hi, I'm Mohit Singh, a 2024 B.Tech graduate in Computer Science from Sagar Institute of Research and Technology, Bhopal. I'm passionate about DevOps and Cloud Computing, and I'm eager to learn, grow, and contribute in this dynamic field.
-                        With a solid academic foundation in computer science, I've also gained hands-on experience through personal projects, specialized training, and internships, which have helped me understand the practical aspects of DevOps tools, cloud infrastructure, and automation practices.
+                        🙋‍♂️ Hi, I'm Mohit Singh, a 2024 B.Tech graduate in Computer Science from Sagar Institute of Research and Technology, Bhopal. I'm a dedicated Cloud & DevOps Engineer with hands-on experience in enterprise-level infrastructure automation, cloud deployment, and DevOps practices.
+                        With a strong foundation in computer science and practical experience through professional projects and internships, I specialize in designing scalable cloud architectures, implementing CI/CD pipelines, and automating infrastructure using modern DevOps tools and practices.
                     </p>
                     <div class="intro-stats">
                         <div class="stat-item">
-                            <span class="stat-number">03</span>
-                            <span class="stat-label">Months Experience</span>
+                            <span class="stat-number">05</span>
+                            <span class="stat-label">DevOps Projects</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">10</span>
-                            <span class="stat-label">Projects Completed</span>
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Technologies Mastered</span>
                         </div>
                     </div>
                 </div>
@@ -314,6 +407,35 @@
     </section>
 
     <section id="skills" class="skills-section">
+        <div class="skills-background">
+            <div class="tech-grid">
+                <div class="tech-line"></div>
+                <div class="tech-line"></div>
+                <div class="tech-line"></div>
+                <div class="tech-line"></div>
+                <div class="tech-line"></div>
+            </div>
+            <div class="skills-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="section-devops-icons skills-icons">
+                <i class="fab fa-jenkins"></i>
+                <i class="fab fa-git-alt"></i>
+                <i class="fas fa-cube"></i>
+                <i class="fas fa-ship"></i>
+                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-shield-alt"></i>
+                <i class="fas fa-code"></i>
+                <i class="fas fa-database"></i>
+                <i class="fas fa-terminal"></i>
+                <i class="fas fa-network-wired"></i>
+            </div>
+        </div>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Technical Skills</h2>
@@ -352,8 +474,13 @@
                 </div>
                 <div class="skill-card">
                     <i class="fab fa-microsoft"></i>
-                    <h3>Azure DevOps</h3>
-                    <p>CI/CD, Boards, and Repos</p>
+                    <h3>Azure</h3>
+                    <p>Cloud platform, DevOps, and services</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-google"></i>
+                    <h3>Google Cloud</h3>
+                    <p>GCP services and cloud infrastructure</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-cube"></i>
@@ -379,48 +506,150 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <p class="section-subtitle">DevOps and Cloud Engineering Projects</p>
             </div>
             <div class="projects-grid">
+                <!-- Project 1: Azure DevOps & Firebase -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="AWS Cloud Project">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Azure DevOps Project">
                     </div>
                     <div class="project-info">
-                        <h3>AWS Cloud Infrastructure</h3>
-                        <p>Designed and deployed a scalable cloud infrastructure using AWS services</p>
+                        <h3>3-Tier Node.js Web Application Deployment using Azure DevOps & Firebase</h3>
+                        <p class="project-duration">May 2025 - Jun 2025 | PaperLive Learning</p>
+                        <p>Designed and deployed a full-stack, 3-tier Node.js web application using Azure DevOps CI/CD pipelines and Azure App Service. Integrated Firebase for authentication and real-time database.</p>
+                        <div class="project-details">
+                            <h5>Key Achievements:</h5>
+                            <ul>
+                                <li>Developed frontend and backend with Node.js, Express, and HTML/CSS</li>
+                                <li>Built automated CI/CD pipeline using Azure DevOps</li>
+                                <li>Deployed application on Azure App Service (Linux)</li>
+                                <li>Configured Firebase for authentication and database storage</li>
+                                <li>Implemented code versioning and collaboration using GitHub</li>
+                            </ul>
+                        </div>
                         <div class="project-tags">
-                            <span>AWS</span>
-                            <span>EC2</span>
-                            <span>S3</span>
+                            <span>Azure DevOps</span>
+                            <span>Node.js</span>
+                            <span>Firebase</span>
+                            <span>Azure App Service</span>
+                            <span>CI/CD</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 2: AWS DevOps -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="CI/CD Pipeline">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="AWS DevOps Project">
                     </div>
                     <div class="project-info">
-                        <h3>CI/CD Pipeline Automation</h3>
-                        <p>Implemented automated deployment pipeline using Jenkins, Docker, and GitHub Actions for continuous integration and delivery.</p>
+                        <h3>End-to-End 3-Tier Node.js Application Deployment Using DevOps Practices on AWS</h3>
+                        <p class="project-duration">Jun 2025 - Jun 2025</p>
+                        <p>Designed and deployed a production-grade 3-tier Node.js application on AWS using complete DevOps practices, covering automation, monitoring, security, and scalability.</p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>🛠️ CI/CD Pipeline using Jenkins</li>
+                                <li>🔍 Code Quality & Security with SonarQube and Trivy</li>
+                                <li>📦 Containerization with Docker and Amazon EKS</li>
+                                <li>☁️ Infrastructure as Code using Terraform</li>
+                                <li>📊 Monitoring with Prometheus and Grafana</li>
+                                <li>🔐 Firebase authentication and database</li>
+                            </ul>
+                        </div>
                         <div class="project-tags">
                             <span>Jenkins</span>
+                            <span>Terraform</span>
                             <span>Docker</span>
-                            <span>GitHub Actions</span>
+                            <span>Amazon EKS</span>
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 3: Kubernetes Deployment -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Monitoring System">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Kubernetes Project">
                     </div>
                     <div class="project-info">
-                        <h3>Monitoring & Logging System</h3>
-                        <p>Built a comprehensive monitoring and logging system using Prometheus, Grafana, and ELK Stack for real-time system insights.</p>
+                        <h3>Three Tier Application Deployment on Kubernetes</h3>
+                        <p class="project-duration">Jan 2024 - Jan 2024</p>
+                        <p>Successfully deployed and managed a three-tier application architecture on Kubernetes with containerization and ingress configuration.</p>
+                        <div class="project-details">
+                            <h5>Key Responsibilities:</h5>
+                            <ul>
+                                <li>Containerized frontend and backend applications</li>
+                                <li>Pushed Docker images to AWS ECR</li>
+                                <li>Configured Ingress Controller for traffic management</li>
+                                <li>Presented unified frontend layer to users</li>
+                            </ul>
+                        </div>
                         <div class="project-tags">
-                            <span>Prometheus</span>
-                            <span>Grafana</span>
-                            <span>ELK Stack</span>
+                            <span>Kubernetes</span>
+                            <span>Amazon EKS</span>
+                            <span>Amazon ECR</span>
+                            <span>Docker</span>
+                            <span>CloudFormation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Service Mesh -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Service Mesh Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Kubernetes Service Mesh with Istio</h3>
+                        <p class="project-duration">Aug 2023 - Aug 2023</p>
+                        <p>Created and managed EKS clusters on AWS with advanced service mesh implementation using Istio for microservices communication.</p>
+                        <div class="project-details">
+                            <h5>Key Achievements:</h5>
+                            <ul>
+                                <li>Created and managed EKS clusters on AWS</li>
+                                <li>Deployed and managed Istio on Kubernetes for service mesh</li>
+                                <li>Deployed Kiali for networking integration visualization</li>
+                                <li>Used Jaeger for distributed tracing</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span>Istio</span>
+                            <span>Amazon EKS</span>
+                            <span>Kiali</span>
+                            <span>Jaeger</span>
+                            <span>Service Mesh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: CI/CD Pipeline -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="CI/CD Pipeline Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Continuous Integration Using Jenkins, Nexus, Sonarqube & Slack</h3>
+                        <p class="project-duration">Jul 2023 - Jul 2023</p>
+                        <p>Implemented and managed a comprehensive continuous integration pipeline using Jenkins, Nexus, SonarQube, and Slack for automated build and deployment processes.</p>
+                        <div class="project-details">
+                            <h5>Key Features:</h5>
+                            <ul>
+                                <li>Created Jenkinsfile for automated build, test, and deployment</li>
+                                <li>Configured webhooks for automatic build triggers</li>
+                                <li>Integrated Slack notifications for build status</li>
+                                <li>Implemented code quality checks with SonarQube</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span>Jenkins</span>
+                            <span>Nexus</span>
+                            <span>SonarQube</span>
+                            <span>Slack</span>
+                            <span>GitHub</span>
+                            <span>Maven</span>
                         </div>
                     </div>
                 </div>
@@ -480,35 +709,104 @@
         </div>
     </section>
 
-    <section id="internships" class="internship-section">
+    <section id="experience" class="experience-section">
         <div class="container">
             <div class="section-title">
-                <h2>Internship Experience</h2>
-                <p class="section-subtitle">My professional journey through various internships and learning experiences</p>
+                <h2>Professional Experience</h2>
+                <p class="section-subtitle">My journey in Cloud Computing and DevOps Engineering</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Summer 2023</div>
-                        <h3>AWS Cloud Intern</h3>
-                        <h4>Zealyug</h4>
-                        <ul class="internship-details">
-                            <li>Collaborated with the development team to design and implement a cloud-based infrastructure for the Zealyug website.</li>
-                            <li>Worked with the deployment team to deploy the Zealyug website to the cloud.</li>
-                            <li>Gained experience in AWS cloud Services.</li>
-                            <li>Skills: EC2, ELB, VPC, AWS RDS, etc.</li>
-                        </ul>
+            
+            <div class="experience-grid">
+                <!-- Current Role -->
+                <div class="experience-card current">
+                    <div class="experience-header">
+                        <div class="experience-badge current-badge">Current</div>
+                        <div class="experience-date">Aug 2025 - Present</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Cloud Intern</h3>
+                        <h4 class="company-name">VSN International Pvt. Ltd.</h4>
+                        <p class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Indore, Madhya Pradesh, India · On-site
+                        </p>
+                        <div class="experience-summary">
+                            <p>Currently working as a Cloud Intern, gaining hands-on experience with enterprise cloud infrastructure and DevOps practices.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Winter 2022</div>
-                        <h3>Contributor</h3>
-                        <h4>EddieHub ·</h4>
-                        <ul class="internship-details">
-                            <li>I have created a profile on EddieHub, through a contribution</li>
-                            <li>Skills: Git , Github , JSON</li>
+
+                <!-- DevOps & Cloud Trainee -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-badge">6 months</div>
+                        <div class="experience-date">Nov 2024 - Apr 2025</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">DevOps & Cloud Trainee</h3>
+                        <h4 class="company-name">PaperLive Learning</h4>
+                        <p class="experience-location">
+                            <i class="fas fa-home"></i>
+                            Remote / Online
+                        </p>
+                        <div class="experience-details">
+                            <h5>Key Achievements:</h5>
+                            <ul class="achievement-list">
+                                <li><i class="fas fa-cogs"></i> Designed and deployed CI/CD pipelines using Jenkins and GitHub Actions</li>
+                                <li><i class="fas fa-docker"></i> Containerized applications with Docker and orchestrated with Kubernetes</li>
+                                <li><i class="fas fa-cloud"></i> Gained hands-on experience with AWS, Azure, and Google Cloud Platform</li>
+                                <li><i class="fas fa-code"></i> Used Terraform for Infrastructure as Code (IaC) implementation</li>
+                                <li><i class="fas fa-chart-line"></i> Set up monitoring and alerting using Prometheus and Grafana</li>
+                                <li><i class="fas fa-shield-alt"></i> Integrated security practices with Trivy and SonarQube</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AWS Cloud Intern -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-badge">3 months</div>
+                        <div class="experience-date">Mar 2023 - May 2023</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">AWS Cloud Intern</h3>
+                        <h4 class="company-name">Zealyug</h4>
+                        <p class="experience-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Delhi, India
+                        </p>
+                        <div class="experience-details">
+                            <h5>Key Responsibilities:</h5>
+                            <ul class="achievement-list">
+                                <li><i class="fas fa-server"></i> Collaborated on cloud-based infrastructure design and implementation</li>
+                                <li><i class="fas fa-rocket"></i> Worked with deployment team for cloud website deployment</li>
+                                <li><i class="fab fa-aws"></i> Gained experience in AWS services: EC2, ELB, VPC, RDS</li>
                         </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contributor -->
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-badge">2 months</div>
+                        <div class="experience-date">Dec 2022 - Jan 2023</div>
+                    </div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Open Source Contributor</h3>
+                        <h4 class="company-name">EddieHub</h4>
+                        <p class="experience-location">
+                            <i class="fas fa-home"></i>
+                            Remote
+                        </p>
+                        <div class="experience-details">
+                            <h5>Contributions:</h5>
+                            <ul class="achievement-list">
+                                <li><i class="fas fa-code-branch"></i> Created profile through community contribution</li>
+                                <li><i class="fas fa-tools"></i> Skills gained: Git, GitHub, JSON</li>
+                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -572,7 +870,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2024 DevOps Portfolio. All rights reserved.</p>
+            <p>&copy; 2024 Cloud/DevOps Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
